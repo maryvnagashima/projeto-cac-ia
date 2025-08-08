@@ -94,7 +94,7 @@ with tab1:
 
     st.pyplot(fig)
 
-with with tab2:
+with tab2:
     st.header("Desempenho do Modelo de IA")
 
     # Histograma mais bonito
@@ -123,7 +123,7 @@ with with tab2:
         st.metric("Recall (1)", "79%")
     with col4:
         st.metric("ROC-AUC", "0.87")
-with with tab3:
+with tab3:
     st.header("🎯 Recomendações de Otimização")
 
     st.markdown("""
