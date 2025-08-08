@@ -1,7 +1,31 @@
-# app.py
+# 🚀 Instalação forçada de dependências (crucial para o Streamlit Cloud)
+import subprocess
+import sys
+
+def install(package):
+    subprocess.check_call([sys.executable, "-m", "pip", "install", package])
+
+# Instalar bibliotecas essenciais
+try:
+    import matplotlib
+except ImportError:
+    install('matplotlib')
+
+try:
+    import pandas
+except ImportError:
+    install('pandas')
+
+try:
+    import sklearn
+except ImportError:
+    install('scikit-learn')
+
+# Agora importe normalmente
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
+from sklearn.metrics import classification_report
 
 # Configuração da página
 st.set_page_config(
